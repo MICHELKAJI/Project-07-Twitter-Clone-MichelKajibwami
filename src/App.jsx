@@ -10,6 +10,7 @@ export default function App() {
       <Home />
       <h1>Hello word</h1>
       <h2>Hello word</h2>
+      <h3>Hello word</h3>
 
     </Layout>
   );
