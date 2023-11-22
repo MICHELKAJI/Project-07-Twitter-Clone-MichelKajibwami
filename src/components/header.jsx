@@ -1,4 +1,5 @@
 import React from "react";
+import TopTweets from "../images/Timeline-Prop.svg";
 
 
 
@@ -15,7 +16,7 @@ function Header (){
 }
 
 function TopTweet (){
-    return <b className="top-tweets"> Icon</b>
+    return <img className ="top-tweets" src={TopTweets} alt="toptweet"/>
 }
 
 function Title (){
