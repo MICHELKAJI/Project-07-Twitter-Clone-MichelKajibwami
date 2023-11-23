@@ -1,14 +1,17 @@
 import React from 'react';
- import Stars from '../images/Stars.png';
-
+import Header from '../components/header';
+import TwitterEditor from '../components/twitterEditor';
+import TweetForm from '../components/tweet';
 
 function Home() {
   return (
     <main className="timeline">
-      <h1>Home</h1>
-     <img src = {Stars} alt='logo etoil' className='top-tweets'/>
+      <Header/>
+      <TwitterEditor/>
+      <TweetForm/>
     </main>
   );
 }
+
 
 export default Home;
