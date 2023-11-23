@@ -2,7 +2,6 @@ import React from "react";
 import img from "../images/twetIcone.png";
 import images from "../images/tweetimage.png";
 
-
 function TweetForm (){
     return (
         <div>
@@ -32,7 +31,6 @@ function TweetProfil ({icon}){
 
     </div>
 }
-
 function TweetContener(){
     return (
         <div className="tweet">
@@ -50,12 +48,11 @@ function TweetAvatar (){
 }
 function TweetBody (){
     return (
-        <div className="tweet-body">
+        <div className="tweettweet">
             <TweetTitle text="The New York Time" icon= "src/images/Group.svg" strong="Future@ 2h."/>
             <TweetText text= "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsa odit illum iste. Suscipit impedit repudiandae facilis, autem sequi architecto ex, reprehenderit quia quidem et iusto dolores nisi consectetur? Sed."/>
             <TweetImage/>
             <TweetActions/>
-           
         </div>
     )
 }
@@ -84,14 +81,14 @@ function TweetImage (){
 }
 function TweetAction({icon, value}){
     return (
-        <div className="tweet-action">
+        <div className="tweet-actions">
             <img src={icon} alt="Tweet"/> <span className="tweet-title-details">{value}</span>
         </div>
     )
 }
 function TweetActions(){
     return (
-        <div className="tweet-actions">
+        <div className="tweet-action">
              <TweetAction icon= "src/images/Reply.svg" value="19"/>
             <TweetAction icon= "src/images/Retweet.svg" value="120"/>
             <TweetAction icon= "src/images/Like.svg" value="190"/>

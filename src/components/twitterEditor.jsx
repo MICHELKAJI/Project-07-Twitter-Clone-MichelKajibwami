@@ -13,7 +13,6 @@ function TwitterEditor(){
         </div>
     )
 }
-
 function ProfilAvatar(){
     return(
         <div className="avatar" >
