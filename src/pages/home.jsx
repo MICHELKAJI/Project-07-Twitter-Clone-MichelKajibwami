@@ -1,11 +1,17 @@
 import React from 'react';
+import Header from '../components/header';
+import TwitterEditor from '../components/twitterEditor';
+import TweetForm from '../components/tweet';
 
 function Home() {
   return (
     <main className="timeline">
-      <h1>Timeline here</h1>
+      <Header/>
+      <TwitterEditor/>
+      <TweetForm/>
     </main>
   );
 }
+
 
 export default Home;
