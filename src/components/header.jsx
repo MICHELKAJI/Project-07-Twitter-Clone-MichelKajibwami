@@ -9,7 +9,6 @@ function Header (){
         <header className = "header">
             <Title/>
             <TopTweet/>
-
         </header>
         </>
     );
