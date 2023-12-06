@@ -4,6 +4,7 @@ import iconGif from "../images/Gif.svg";
 import iconMedia from "../images/Media.svg";
 import iconPoll from "../images/Poll.svg";
 import iconSchdule from "../images/Schedule.svg";
+import Button from "./buttonTwitter";
 
 function TwitterEditor(){
     return (
@@ -36,15 +37,10 @@ function TwetteEditorInput (){
 function TwitterButtonForm (){
     return (<div className="tweet-editor-buttons">
         <TweeterEditorAction/>
-        <Button/>
+        <Button style= "button"/>
     </div>)
 }
 
-function Button (){
-    return <div>
-        <button className="button">Tweet</button>
-    </div>
-}
 function TweeterEditorAction (){
     return <div className="tweet-editor-actions">
         <img src={iconGif} alt="Edit icon" />

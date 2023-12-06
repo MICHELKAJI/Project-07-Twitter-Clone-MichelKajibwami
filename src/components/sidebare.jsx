@@ -1,3 +1,5 @@
+import Button from "./buttonTwitter";
+
 function Sidebare(){
     return(
         <div className="sidebar">
@@ -11,6 +13,7 @@ function Sidebare(){
             <IconSidebar icon="src\images\Lists.svg" text ="Lists"/>
             <IconSidebar icon="src\images\Profiles.svg" text ="Profile"/>
             <IconSidebar icon="src\images\More.svg" text ="More"/>
+            <Button style="buttonTow"/>
 
         </div>
     ) 
@@ -18,7 +21,7 @@ function Sidebare(){
 
 function IconSidebar({icon, text}){
     return(
-        <div className="sidebarIcon">
+        <div className="sidebarIcon tweet-title">
             <img src={icon} alt="icon" />
             <h3>{text}</h3>
         </div>

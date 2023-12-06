@@ -3,6 +3,7 @@ import Header from '../components/header';
 import TwitterEditor from '../components/twitterEditor';
 import TweetForm from '../components/tweet';
 import Sidebare from '../components/sidebare';
+import Trends from '../components/trends';
 
 
 
@@ -17,8 +18,8 @@ function Home() {
        <TwitterEditor/>
        <TweetForm/>
      </main>
-     <aside>
-      <h1>Hello</h1>
+     <aside className='aside'>
+     <Trends/>
      </aside>
     </>
     
