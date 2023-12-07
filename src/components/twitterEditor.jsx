@@ -37,7 +37,7 @@ function TwetteEditorInput (){
 function TwitterButtonForm (){
     return (<div className="tweet-editor-buttons">
         <TweeterEditorAction/>
-        <Button style= "button"/>
+        <Button style= "button"> Twitter</Button>
     </div>)
 }
 

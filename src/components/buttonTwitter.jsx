@@ -1,6 +1,6 @@
-function Button ({style}){
+function Button ({style,children}){
     return <div>
-        <button  className={style}>Tweet</button>
+        <button  className={style}>{children}</button>
     </div>
 }
 

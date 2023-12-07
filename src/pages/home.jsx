@@ -18,7 +18,7 @@ function Home() {
        <TwitterEditor/>
        <TweetForm/>
      </main>
-     <aside className='aside'>
+     <aside className='asideTow'>
      <Trends/>
      </aside>
     </>

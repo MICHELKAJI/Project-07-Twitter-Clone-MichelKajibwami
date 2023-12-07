@@ -13,7 +13,7 @@ function Sidebare(){
             <IconSidebar icon="src\images\Lists.svg" text ="Lists"/>
             <IconSidebar icon="src\images\Profiles.svg" text ="Profile"/>
             <IconSidebar icon="src\images\More.svg" text ="More"/>
-            <Button style="buttonTow"/>
+            <Button style="buttonTow">Twitter</Button>
 
         </div>
     ) 
