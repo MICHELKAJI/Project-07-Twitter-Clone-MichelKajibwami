@@ -20,6 +20,7 @@ function Trends(){
                 <ShowMore/>
             </div>
             <div className='trends'>
+                <TitleSidbar/>
                 <Follow profil="src\images\tweetprofile.png" tilte="CNN" icon= "src\images\Group.svg" tiltTow="@CNN"/>
                 <Follow profil="src\images\twetIcone.png" tilte="NEW YORK TIM" icon="src\images\Group.svg" tiltTow="@CNN"/>
                 <Follow profil="src\images\twitter.svg" tilte="Twitter" icon= "src\images\Group.svg" tiltTow="@CNN"/>
@@ -67,9 +68,6 @@ function ShowMore(){
 function Follow({profil, tilte, icon, tiltTow}){
     return(
         <div>
-            <div>
-                <h3>Who to follow</h3>
-            </div>
             <div className='follow'>
                 <div className='follows'>
                 <div><img className='avatare'src={profil} alt="icon" /></div>
@@ -83,6 +81,14 @@ function Follow({profil, tilte, icon, tiltTow}){
                   </div>
                     <Button style="buttonFollow">Follow</Button>
             </div>
+        </div>
+    )
+}
+
+function TitleSidbar(){
+    return(
+        <div>
+            <h3>Who to follow</h3>
         </div>
     )
 }

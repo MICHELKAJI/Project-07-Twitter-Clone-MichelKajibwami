@@ -169,6 +169,7 @@ body{
     align-items: flex-start;
     gap: 10px;
     font-size: 1rem;
+    color: beige;
 }
 
 .tweet-title svg{
@@ -319,6 +320,24 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.bannerStyle{
+    height: 10rem;
+    width: 100%;
+    background-color: #202327;
+}
+
+.headerStyle{
+    height: 3rem;
+}
+.headerStyle h1{
+    margin-left: 1rem;
+}
+
+.avatares img {
+    margin-top: -3rem;
+    margin-left: 1rem;
+   
 }
 
 

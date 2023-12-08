@@ -1,23 +1,17 @@
 import React from "react";
-import profile from "../images/profile.png";
 import iconGif from "../images/Gif.svg";
 import iconMedia from "../images/Media.svg";
 import iconPoll from "../images/Poll.svg";
 import iconSchdule from "../images/Schedule.svg";
 import Button from "./buttonTwitter";
+import ProfilAvatar from "./ProfilAvatar";
+
 
 function TwitterEditor(){
     return (
         <div className="tweet-editor">
-            <ProfilAvatar/>
+            <ProfilAvatar imag='src\images\profile.png' style='avatar'/>
             <TweetEditorForm/>
-        </div>
-    )
-}
-function ProfilAvatar(){
-    return(
-        <div className="avatar" >
-            <img src={profile} alt="profile"/>
         </div>
     )
 }
