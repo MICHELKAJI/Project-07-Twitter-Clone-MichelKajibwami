@@ -1,4 +1,3 @@
-import ProfilAvatar from "./ProfilAvatar";
 import Button from "./buttonTwitter";
 import HeaderProfil from "./headerProfil";
 import NavBarre from "./navBarre";

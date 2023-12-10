@@ -4,7 +4,8 @@ import iconMedia from "../images/Media.svg";
 import iconPoll from "../images/Poll.svg";
 import iconSchdule from "../images/Schedule.svg";
 import Button from "./buttonTwitter";
-import ProfilAvatar from "./ProfilAvatar";
+import ProfilAvatar from "./profilAvatar";
+
 
 
 function TwitterEditor(){
