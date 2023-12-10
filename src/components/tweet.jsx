@@ -12,24 +12,23 @@ function TweetForm (){
         </div>
     )
 }
-function TweetOne (){
-    return (
+      function TweetOne (){
+      return (
         <div className="tweet">
                 <TweetProfil icon="src/images/tweetprofile.png"/>
-
-               <div className="tweet-content">
-               <div className="tweet-body">
-                 <TweetTitle text="CNN" icon="src/images/Group.svg" strong="Tukya@ 1h."/>
-                 <TweetText text= "Bonjour juste vous informer que suis pas d'humeur"/>
-             </div>
-             <TweetActions/>
-               </div>
+                 <div className="tweet-content">
+                   <div className="tweet-body">
+                   <TweetTitle text="CNN" icon="src/images/Group.svg" strong="Tukya@ 1h."/>
+                   <TweetText text= "Bonjour juste vous informer que suis pas d'humeur"/>
+                </div>
+                    <TweetActions/>
+              </div>
         </div>
     )
 }
 
-function TweetTow(){
-    return (
+      function TweetTow(){
+      return (
         <div className="tweet">
                 <TweetProfil icon="src\images\twetIcone.png"/>
                <div className="tweet-content">
@@ -41,18 +40,15 @@ function TweetTow(){
              <TweetActions/>
                </div>
         </div>
-        
-    )
-};
+    )};
 
-function TweetThree (){
-    return (
+        function TweetThree (){
+       return (
         <div className="tweet">
         <TweetProfil icon="src/images/twitter.svg"/>
-
        <div className="tweet-content">
        <div className="tweet-body">
-         <TweetTitle text="CNN" icon="src/images/Group.svg" strong="Tukya@ 1h."/>
+         <TweetTitle text="CNN" icon="src/images/Group.svg" strong="Tukya@1h."/>
          <TweetText text= "Bonjour suis développeur fullstack pour vos projets de digitalisation n'hésité pas à nous consulter"/>
      </div>
      <TweetActions/>
@@ -60,18 +56,17 @@ function TweetThree (){
 </div> )
 }
 
-function TweetFor (){
-    return (
+      function TweetFor (){
+       return (
         <div className="tweet">
-        <TweetProfil icon="src/images/twitter.svg"/>
-
-       <div className="tweet-content">
-       <div className="tweet-body">
-         <TweetTitle text="CNN" icon="src/images/Group.svg" strong="Tukya@ 1h."/>
-         <TweetText text= "Bonjour suis développeur fullstack pour vos projets de digitalisation n'hésité pas à nous consulter"/>
+            <TweetProfil icon="src/images/twitter.svg"/>
+            <div className="tweet-content">
+            <div className="tweet-body">
+             <TweetTitle text="CNN" icon="src/images/Group.svg" strong="Tukya@ 1h."/>
+            <TweetText text= "Bonjour suis développeur fullstack pour vos projets de digitalisation n'hésité pas à nous consulter"/>
      </div>
-     <TweetActions/>
-       </div>
+      <TweetActions/>
+    </div>
 </div>)}
 
 function TweetFive (){
@@ -87,8 +82,7 @@ function TweetFive (){
              <TweetActions/>
                </div>
         </div>
-        )
-}
+        )}
 
 function TweetTitle ({text, strong, icon}){
     return<div className="tweet-title">
@@ -107,8 +101,7 @@ function TweetText ({text}){
         </p>
 
         </div>
-    )
-}
+    )}
 
 function TweetImage (){
     return (
