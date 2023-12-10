@@ -2,7 +2,7 @@ import React from "react";
 import Sidebare from "../components/sidebare";
 import Trends from "../components/trends";
 import HeaderProfil, { BannerProfil } from "../components/headerProfil";
-import ProfilAvatar from "../components/ProfilAvatar";
+import UserProfile from "../components/userprofil";
 
 function Profil(){
     return(
@@ -13,6 +13,7 @@ function Profil(){
         <main className="timeline">
             <HeaderProfil name= "MichelKaji"/>
             <BannerProfil/>
+            <UserProfile/>
             
 
        </main>

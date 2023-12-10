@@ -322,7 +322,7 @@ a{
     justify-content: space-between;
 }
 .bannerStyle{
-    height: 10rem;
+    height: 8rem;
     width: 100%;
     background-color: #202327;
 }
@@ -330,14 +330,61 @@ a{
 .headerStyle{
     height: 3rem;
 }
-.headerStyle h1{
+.headerStyle h1, span{
     margin-left: 1rem;
 }
 
 .avatares img {
-    margin-top: -3rem;
+    margin-top: -4rem;
     margin-left: 1rem;
    
+}
+.buttone {
+    text-transform: capitalize;
+    padding: .7rem 1.5rem;
+    border-radius: 50px;
+    background-color:black;
+    color: white;
+    font-size: 1rem;
+    border: 1px solid white;
+}
+.iconProfil{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.5rem;
+}
+
+.titleStyle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.styleNabarr{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+}
+.styleNabarr li{
+    list-style: none;
+    color: #2F3336;
+    cursor: pointer;
+}
+.titlesuser{
+    color: #2F3336;
+    font-size: 1rem;
+}
+.styleUserProfil{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+   
+}
+.navbarstyle{
+    border-bottom: 1px solid #2F3336;
+    width: 100%;
+    padding: 1.5rem 1rem;
 }
 
 
