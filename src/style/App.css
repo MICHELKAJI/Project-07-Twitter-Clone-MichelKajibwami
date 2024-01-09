@@ -306,7 +306,7 @@ a{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 7rem;
+    gap: 6rem;
 }
 .avatare{
     height: 2.5rem;
@@ -386,5 +386,4 @@ a{
     width: 100%;
     padding: 1.5rem 1rem;
 }
-
 

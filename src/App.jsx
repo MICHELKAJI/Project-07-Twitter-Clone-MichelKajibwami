@@ -13,7 +13,7 @@ import('./style/App.css');
     <Layout>
        <Routes>
             <Route path='/' element ={<Home/>}/>
-            <Route path='/:user' element ={<Profil/>}/>
+            <Route path='/profile' element ={<Profil/>}/>
     </Routes>
     </Layout>
     </BrowserRouter>
