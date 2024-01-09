@@ -39,10 +39,7 @@ function Tweet({tweet}) {
 
     )
 }
-   
 
-function TweetTitle ({text, strong, icon}){
-    return<div className="tweet-title">
 function TweetTitle({ text, strong, icon }) {
     return <div className="tweet-title">
         <h2 className="tweet-title-author">{text}</h2>
