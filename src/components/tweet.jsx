@@ -13,7 +13,7 @@ function TweetForm (){
     )
 }
       function TweetOne (){
-      return (
+      return ( 
         <div className="tweet">
                 <TweetProfil icon="src/images/tweetprofile.png"/>
                  <div className="tweet-content">
