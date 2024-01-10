@@ -233,7 +233,8 @@ body{
 .sidebarIcon{
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    padding: 3px;
+    border-radius: 1rem;
 }
 .inputstyle{
     display: flex;
@@ -291,7 +292,6 @@ body{
     align-items: center;
     font-size: 1rem;
     justify-content: space-between;
-    gap: 8rem;
 }
 
 .asideTow{
@@ -306,7 +306,7 @@ a{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 6rem;
+    gap: 1rem;
 }
 .avatare{
     height: 2.5rem;
@@ -385,5 +385,17 @@ a{
     border-bottom: 1px solid #2F3336;
     width: 100%;
     padding: 1.5rem 1rem;
+}
+
+.hover:hover{
+    background-color: #151617;
+}
+.Vector img{
+    fill: #2F3336;
+}
+
+.Vector img:hover{
+    fill: #1D9BF0;
+    background-color: rgb(164, 200, 232);
 }
 
