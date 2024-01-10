@@ -116,6 +116,22 @@ const datas = [
         like: 100,
         retweet: 2
 
+    },
+    {
+
+        id: 3,
+        autheur: "Tukya",
+        profil: "src/images/profile.png",
+        profilTweet: "src/images/twetIcone.png",
+        text: "Bonjour suis développeur fullstack pour vos projets de digitalisation n'hésité pas à nous consulter react",
+        postImage: "src/images/tweetimage.png",
+        tweetTitle: "New York Time",
+        tweetpseudo: "@Tukya h1",
+        iconTitle: "src/images/Group.svg",
+        comment: 0,
+        like: 100,
+        retweet: 2
+
     }
 ]
 
