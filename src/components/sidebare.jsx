@@ -22,7 +22,7 @@ function Sidebare(){
 
 function IconSidebar({icon, text, routes }){
     return(
-        <div className="sidebarIcon tweet-title">
+        <div className="sidebarIcon tweet-title hover">
             <Link to ={routes} className="sidebarIcon tweet-title"> <img src={icon} alt="icon" />
             <h3>{text}</h3></Link>
             

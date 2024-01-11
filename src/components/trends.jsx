@@ -71,7 +71,7 @@ function Follow({profil, tilte, icon, tiltTow}){
             <div className='follow'>
                 <div className='follows'>
                 <div><img className='avatare'src={profil} alt="icon" /></div>
-                <div>
+                <div            >
                     <div className='follower'>
                         <h3 className='tweet-title-author'>{tilte}</h3>
                          <img src={icon} alt="icon" />
