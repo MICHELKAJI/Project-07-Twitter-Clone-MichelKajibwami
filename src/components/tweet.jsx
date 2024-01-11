@@ -38,28 +38,6 @@ function Tweets() {
         </div>
     )
 }
-
-function Tweet({tweet}) {
-    return (
-        <div className="tweet">
-            <TweetProfil icon={tweet.profilTweet} />
-
-            <div className="tweet-content">
-                <div className="tweet-body">
-                    <TweetTitle text={tweet.tweetTitle} icon={tweet.iconTitle} strong={tweet.tweetpseudo}  />
-                    <TweetText text={tweet.text} />
-                    <TweetImage images={tweet.postImage}/>
-                </div>
-                <div className="tweet-actions">
-            <TweetAction icon={images} value={tweet.comment} />
-            <TweetAction icon={iconRetweet} value={tweet.retweet} />
-            <TweetAction icon={iconLike} value={tweet.like} />
-            <TweetAction icon={iconDownload} />
-        </div>
-            </div>
-        </div>
-    )
-}
 function TweetTitle({ text, strong, icon }) {
     return <div className="tweet-title">
         <h2 className="tweet-title-author">{text}</h2>
