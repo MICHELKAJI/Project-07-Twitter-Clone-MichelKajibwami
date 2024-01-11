@@ -11,7 +11,6 @@ function Tweets() {
             {datas.map(tweet => (
                 <Tweet key={tweet.id} tweet={tweet} />
             ))
-
             }
         </div>
     )
@@ -36,7 +35,6 @@ function Tweet({tweet}) {
         </div>
             </div>
         </div>
-
     )
 }
 
