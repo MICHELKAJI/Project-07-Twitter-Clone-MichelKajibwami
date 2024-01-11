@@ -34,12 +34,37 @@ function Tweets() {
             {datas.map(tweet => (
                 <Tweet key={tweet.id} tweet={tweet} />
             ))
-
             }
         </div>
     )
 }
 
+<<<<<<< HEAD
+=======
+
+function Tweet({tweet}) {
+    return (
+        <div className="tweet">
+            <TweetProfil icon={tweet.profilTweet} />
+
+            <div className="tweet-content">
+                <div className="tweet-body">
+                    <TweetTitle text={tweet.tweetTitle} icon={tweet.iconTitle} strong={tweet.tweetpseudo}  />
+                    <TweetText text={tweet.text} />
+                    <TweetImage images={tweet.postImage}/>
+                </div>
+                <div className="tweet-actions">
+            <TweetAction icon={images} value={tweet.comment} />
+            <TweetAction icon={iconRetweet} value={tweet.retweet} />
+            <TweetAction icon={iconLike} value={tweet.like} />
+            <TweetAction icon={iconDownload} />
+        </div>
+            </div>
+        </div>
+    )
+}
+
+>>>>>>> 4bdd32a23fdf8f3591381cc643be3eb2f573da6a
 function TweetTitle({ text, strong, icon }) {
     return <div className="tweet-title">
         <h2 className="tweet-title-author">{text}</h2>

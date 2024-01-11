@@ -6,7 +6,6 @@ import Sidebare from '../components/sidebare';
 import Trends from '../components/trends';
 
 
-
 function Home() {
   return (
     <>
