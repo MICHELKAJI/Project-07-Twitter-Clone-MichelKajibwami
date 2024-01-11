@@ -40,7 +40,6 @@ function Tweets() {
     )
 }
 
-
 function TweetTitle({ text, strong, icon }) {
     return <div className="tweet-title">
         <h2 className="tweet-title-author">{text}</h2>
@@ -60,7 +59,6 @@ function TweetText({ text }) {
         </div>
     )
 }
-
 function TweetImage({ images }) {
     return (
         <div className="tweet-image">

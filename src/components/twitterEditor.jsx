@@ -25,7 +25,7 @@ function TweetEditorForm(){
 
 function TwetteEditorInput (){
     return (
-            <input type="text" className="tweet-editor-input" placeholder=" What's happening"/>
+        <textarea className="tweet-editor-input" rows="4" cols="50" placeholder=" What's happening"></textarea>
     ) 
 }
 

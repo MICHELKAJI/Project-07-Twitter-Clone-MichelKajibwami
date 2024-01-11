@@ -220,7 +220,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
 }
 
 .sidebar {
@@ -394,8 +393,20 @@ a{
     fill: #2F3336;
 }
 
-.Vector img:hover{
+.Vector:hover img{
     fill: #1D9BF0;
-    background-color: rgb(164, 200, 232);
+    background-color: rgb(42, 46, 49);
+    color: #1D9BF0;
+}
+.Vector:hover span{
+    color: #1D9BF0;
+}
+.Vector img{
+    padding: 1rem;
+    border-radius: 100%;
+}
+.Vector span:hover{
+    color: #1D9BF0;
+    transition: all ease 1s;
 }
 
