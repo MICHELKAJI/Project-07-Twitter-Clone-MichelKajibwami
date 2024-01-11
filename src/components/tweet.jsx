@@ -39,7 +39,7 @@ function Tweets() {
     )
 }
 
-<<<<<<< HEAD
+
 function Tweet({tweet}) {
     return (
         <div className="tweet">
@@ -61,8 +61,6 @@ function Tweet({tweet}) {
         </div>
     )
 }
-=======
->>>>>>> 14b9ef3944a314ade3e148c1b8f1ef6d44a704e6
 
 function TweetTitle({ text, strong, icon }) {
     return <div className="tweet-title">
