@@ -181,6 +181,7 @@ body{
 }
 .tweet-title-details{
     color: #6E767D;
+    margin: -5px;
 }
 .tweet-text{
     color: #D9D9D9;
@@ -389,24 +390,42 @@ a{
 .hover:hover{
     background-color: #151617;
 }
-.Vector img{
-    fill: #2F3336;
+
+.hovered:hover .my-path{
+    fill: #1D9BF0;
+    
+}
+.hovered:hover .hoverPath{
+    background-color:  #72add457;
 }
 
-.Vector:hover img{
-    fill: #1D9BF0;
-    background-color: rgb(42, 46, 49);
-    color: #1D9BF0;
-}
-.Vector:hover span{
-    color: #1D9BF0;
-}
-.Vector img{
-    padding: 1rem;
+.hoverPath{
+    padding: 0.6rem;
     border-radius: 100%;
+    transition: all ease 0.5s;
+  
 }
-.Vector span:hover{
+.hovered:hover span{
     color: #1D9BF0;
-    transition: all ease 1s;
+    transition: all ease 0.5s;
+}
+
+.hovered2:hover .my-path2{
+    fill: #0cd230;
+    
+}
+.hovered2:hover .hoverPath2{
+    background-color:  #3cd35334;
+}
+
+.hoverPath2{
+    padding: 0.6rem;
+    border-radius: 100%;
+    transition: all ease 0.5s;
+  
+}
+.hovered2:hover span{
+    color:  #0cd230;
+    transition: all ease 0.5s;
 }
 
