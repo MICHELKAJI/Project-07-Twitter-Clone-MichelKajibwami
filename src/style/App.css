@@ -396,7 +396,7 @@ a{
     
 }
 .hovered:hover .hoverPath{
-    background-color:  #72add457;
+    background-color:  #72add43b;
 }
 
 .hoverPath{
@@ -426,6 +426,24 @@ a{
 }
 .hovered2:hover span{
     color:  #0cd230;
+    transition: all ease 0.5s;
+}
+.hovered3:hover .my-path3{
+    fill: #e43a10;
+    
+}
+.hovered3:hover .hoverPath3{
+    background-color:  #c528101a;
+}
+
+.hoverPath3{
+    padding: 0.6rem;
+    border-radius: 100%;
+    transition: all ease 0.5s;
+  
+}
+.hovered3:hover span{
+    color:  #ec360d;
     transition: all ease 0.5s;
 }
 

@@ -15,6 +15,8 @@ function Tweet({ tweet }) {
                 <div className="tweet-actions ">
                     <TweetComment value={tweet.comment} />
                     <TweetReply value={tweet.retweet}/>
+                    <TweetLike value={tweet.like}/>
+                    <Downlod/>
                     
                 </div>
             </div>
@@ -110,6 +112,58 @@ function TweetReply ({value}){
             </div>
         
              <span className="tweet-title-details">{value}</span>
+        </div>
+    )
+
+}
+function TweetLike ({value}){
+    const [isHovered3, setIsHovered3] = useState(false);
+
+    const handleMouseEnter3 = () => {
+      setIsHovered3(true);
+    };
+  
+    const handleMouseLeave3 = () => {
+      setIsHovered3(false);
+    };
+    return (
+        <div className="tweet-action hovered3">
+            <div className='hoverPath3'>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+            className={isHovered3 ? 'hovered3' : ''}
+            onMouseEnter={handleMouseEnter3}
+            onMouseLeave={handleMouseLeave3}>
+             <path className="my-path3"  d="M9 16.5317H8.98833C6.83583 16.4917 0.625 10.88 0.625 5.56499C0.625 3.01166 2.72917 0.769989 5.1275 0.769989C7.03583 0.769989 8.31917 2.08666 8.99917 3.04499C9.6775 2.08832 10.9608 0.769989 12.87 0.769989C15.27 0.769989 17.3733 3.01166 17.3733 5.56582C17.3733 10.8792 11.1617 16.4908 9.00917 16.53H9V16.5317ZM5.12833 2.02082C3.395 2.02082 1.87583 3.67749 1.87583 5.56666C1.87583 10.35 7.7375 15.23 9.00083 15.2817C10.2658 15.23 16.1258 10.3508 16.1258 5.56666C16.1258 3.67749 14.6067 2.02082 12.8733 2.02082C10.7667 2.02082 9.59 4.46749 9.58 4.49166C9.38833 4.95999 8.61667 4.95999 8.42417 4.49166C8.4125 4.46666 7.23667 2.02082 5.12917 2.02082H5.12833Z" fill="#6E767D"/>
+           </svg>
+            </div>
+        
+             <span className="tweet-title-details">{value}</span>
+        </div>
+    )
+
+}
+
+function Downlod (){
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+      setIsHovered(true);
+    };
+  
+    const handleMouseLeave = () => {
+      setIsHovered(false);
+    };
+    return (
+        <div className="tweet-action hovered">
+            <div className='hoverPath'>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+            className={isHovered ? 'hovered' : ''}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}>
+             <path className="my-path"  d="M13.6084 4.72501L9.4417 0.558339C9.19753 0.314172 8.8017 0.314172 8.55836 0.558339L4.3917 4.72501C4.1467 4.96917 4.1467 5.36501 4.3917 5.60834C4.6367 5.85167 5.03086 5.85334 5.27503 5.60834L8.37503 2.50834V11C8.37503 11.345 8.65503 11.625 9.00003 11.625C9.34503 11.625 9.62503 11.345 9.62503 11V2.50834L12.725 5.60834C12.8467 5.73084 13.0067 5.79167 13.1667 5.79167C13.3267 5.79167 13.4867 5.73167 13.6084 5.60834C13.8525 5.36417 13.8525 4.96917 13.6084 4.72501Z" fill="#6E767D"/>
+             <path className="my-path" d="M15.4234 16.7867H2.57669C1.52335 16.7867 0.666687 15.93 0.666687 14.8767V10.1667C0.666687 9.82166 0.946687 9.54166 1.29169 9.54166C1.63669 9.54166 1.91669 9.82166 1.91669 10.1667V14.8767C1.91669 15.2408 2.21252 15.5367 2.57669 15.5367H15.4234C15.7875 15.5367 16.0834 15.2408 16.0834 14.8767V10.1667C16.0834 9.82166 16.3634 9.54166 16.7084 9.54166C17.0534 9.54166 17.3334 9.82166 17.3334 10.1667V14.8767C17.3334 15.93 16.4767 16.7867 15.4234 16.7867Z" fill="#6E767D"/>
+           </svg>
+            </div>
         </div>
     )
 
