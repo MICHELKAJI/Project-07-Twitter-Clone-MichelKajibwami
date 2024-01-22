@@ -429,7 +429,7 @@ a{
     transition: all ease 0.5s;
 }
 .hovered3:hover .my-path3{
-    fill: #e43a10;
+    stroke: #e43a10;
     
 }
 .hovered3:hover .hoverPath3{
@@ -447,3 +447,9 @@ a{
     transition: all ease 0.5s;
 }
 
+.tweet-title-detail{
+    color: #6E767D;
+    margin: -5px;
+    width: 1rem;
+    cursor:default;
+}

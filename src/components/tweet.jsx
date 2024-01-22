@@ -17,7 +17,6 @@ function Tweet({ tweet }) {
                     <TweetReply value={tweet.retweet}/>
                     <TweetLike value={tweet.like}/>
                     <Downlod/>
-                    
                 </div>
             </div>
         </div>
@@ -29,8 +28,7 @@ function Tweets() {
     return (
         <div>
             {datas.map(tweet => (
-                <Tweet key={tweet.id} tweet={tweet} />
-            ))
+                <Tweet key={tweet.id} tweet={tweet} /> ))
             }
         </div>
     )
@@ -63,9 +61,9 @@ function TweetImage({ images }) {
     )
 }
 
-function TweetComment({value }) {
+function TweetComment({value}) {
     const [isHovered, setIsHovered] = useState(false);
-
+   
     const handleMouseEnter = () => {
       setIsHovered(true);
     };
@@ -85,14 +83,14 @@ function TweetComment({value }) {
             </svg>
             </div>
         
-             <span className="tweet-title-details">{value}</span>
+             <span className="tweet-title-detail">{value}</span>
         </div>
     )
 }
  
 function TweetReply ({value}){
     const [isHovered2, setIsHovered] = useState(false);
-
+   
     const handleMouseEnter2 = () => {
       setIsHovered(true);
     };
@@ -111,14 +109,24 @@ function TweetReply ({value}){
            </svg>
             </div>
         
-             <span className="tweet-title-details">{value}</span>
+             <span className="tweet-title-detail">{value}</span>
         </div>
     )
 
 }
 function TweetLike ({value}){
     const [isHovered3, setIsHovered3] = useState(false);
+    const [count, setcount] = useState(value);
+    const [icon, seticon] = useState(false);
 
+    const handlclique = () => {
+        if(!icon){
+            setcount(count +1)
+        }else{
+            setcount(count -1)
+        }return(seticon(!icon))
+       
+    }
     const handleMouseEnter3 = () => {
       setIsHovered3(true);
     };
@@ -129,15 +137,19 @@ function TweetLike ({value}){
     return (
         <div className="tweet-action hovered3">
             <div className='hoverPath3'>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+            <svg xmlns="http://www.w3.org/2000/svg" 
+            fill={icon? "red" : "none"}  width="30" height="20" viewBox="0 0 24 24" stroke={icon? "red": "gray"} stroke-width="2"
             className={isHovered3 ? 'hovered3' : ''}
             onMouseEnter={handleMouseEnter3}
-            onMouseLeave={handleMouseLeave3}>
-             <path className="my-path3"  d="M9 16.5317H8.98833C6.83583 16.4917 0.625 10.88 0.625 5.56499C0.625 3.01166 2.72917 0.769989 5.1275 0.769989C7.03583 0.769989 8.31917 2.08666 8.99917 3.04499C9.6775 2.08832 10.9608 0.769989 12.87 0.769989C15.27 0.769989 17.3733 3.01166 17.3733 5.56582C17.3733 10.8792 11.1617 16.4908 9.00917 16.53H9V16.5317ZM5.12833 2.02082C3.395 2.02082 1.87583 3.67749 1.87583 5.56666C1.87583 10.35 7.7375 15.23 9.00083 15.2817C10.2658 15.23 16.1258 10.3508 16.1258 5.56666C16.1258 3.67749 14.6067 2.02082 12.8733 2.02082C10.7667 2.02082 9.59 4.46749 9.58 4.49166C9.38833 4.95999 8.61667 4.95999 8.42417 4.49166C8.4125 4.46666 7.23667 2.02082 5.12917 2.02082H5.12833Z" fill="#6E767D"/>
-           </svg>
+            onMouseLeave={handleMouseLeave3}
+            onClick={handlclique}
+            stroke-linecap="round" stroke-linejoin="arcs">
+        <path className="my-path3" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C16.09 3.81 17.76 3 19.5 3 22.58 3 25 5.42 25 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </svg>
+           
             </div>
         
-             <span className="tweet-title-details">{value}</span>
+             <span className="tweet-title-detail">{count}</span>
         </div>
     )
 
