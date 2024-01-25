@@ -1,9 +1,10 @@
 import React from 'react';
 import Header from '../components/header';
 import TwitterEditor from '../components/twitterEditor';
-import Tweets from '../components/tweet';
 import Sidebare from '../components/sidebare';
 import Trends from '../components/trends';
+import Tweet from '../components/tweet';
+
 
 
 function Home() {
@@ -15,7 +16,7 @@ function Home() {
       <main className="timeline">
        <Header/>
        <TwitterEditor/>
-       <Tweets/>
+       <Tweet/>
      </main>
      <aside className='asideTow'>
      <Trends/>

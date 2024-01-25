@@ -1,67 +1,88 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import {  TweetContext } from './ContextDatas';
+import { createContext } from 'react';
 
+const datasContexte = createContext()
 
-function Tweet({ tweet }) {
+function Tweets() {
+    const tweet = useContext(TweetContext)
     return (
-        <div className="tweet">
-            <TweetProfil icon={tweet.profilTweet} />
+        // <ContextProvider>
+        <>
+        
+        
 
+        <div>
+        {tweet.map(tweet=>
+           
+            <div className="tweet" key={tweet.id}>
+           <datasContexte.Provider value={tweet}>
+                
+        <TweetProfil/> 
             <div className="tweet-content">
                 <div className="tweet-body">
-                    <TweetTitle text={tweet.tweetTitle} icon={tweet.iconTitle} strong={tweet.tweetpseudo} />
-                    <TweetText text={tweet.text} />
-                    <TweetImage images={tweet.postImage} />
+               
+                    <TweetTitle/>
+                    <TweetText/>
+                    <TweetImage/>
                 </div>
                 <div className="tweet-actions ">
-                    <TweetComment value={tweet.comment} />
-                    <TweetReply value={tweet.retweet}/>
-                    <TweetLike value={tweet.like}/>
+                    <TweetComment/>
+                    <TweetReply/>
+                    <TweetLike/>
                     <Downlod/>
                 </div>
             </div>
+            </datasContexte.Provider> 
         </div>
+         )}
+        </div>
+        
+        </>
+        // </ContextProvider>
 
     )
 }
 
-function Tweets() {
-    return (
-        <div>
-            {datas.map(tweet => (
-                <Tweet key={tweet.id} tweet={tweet} /> ))
-            }
-        </div>
-    )
+
+function TweetTitle() {
+    const tweet = useContext(datasContexte)
+
+    return(<>
+         <div className="tweet-title" >
+         <h2 className="tweet-title-author">{tweet.tweetTitle}</h2>
+         <div className="">
+             <img src={tweet.iconTitle} alt="title tweet" />
+         </div>
+         <strong className="tweet-title-details">{tweet.tweetpseudo}</strong>
+     </div>
+
+     </>) 
 }
-function TweetTitle({ text, strong, icon }) {
-    return <div className="tweet-title">
-        <h2 className="tweet-title-author">{text}</h2>
-        <div className="">
-            <img src={icon} alt="title tweet" />
-        </div>
-        <strong className="tweet-title-details">{strong}</strong>
-    </div>
-}
-function TweetText({ text }) {
+function TweetText() {
+    const tweet = useContext(datasContexte)
     return (
         <div className="tweet-text">
-            <p >
-                {text}
+            <p>
+            {tweet.text}
             </p>
+           
 
         </div>
     )
 }
-function TweetImage({ images }) {
+function TweetImage() {
+    const tweet = useContext(datasContexte)
     return (
         <div className="tweet-image">
-            <img src={images} alt="imageTweet" />
+            <img src={tweet.postImage} alt="imageTweet" />
 
         </div>
     )
 }
 
-function TweetComment({value}) {
+function TweetComment() {
+    const tweet = useContext(datasContexte)
     const [isHovered, setIsHovered] = useState(false);
    
     const handleMouseEnter = () => {
@@ -83,12 +104,14 @@ function TweetComment({value}) {
             </svg>
             </div>
         
-             <span className="tweet-title-detail">{value}</span>
+             <span className="tweet-title-detail">{tweet.comment}</span>
         </div>
     )
 }
  
-function TweetReply ({value}){
+function TweetReply (){
+    const tweet = useContext(datasContexte)
+   
     const [isHovered2, setIsHovered] = useState(false);
    
     const handleMouseEnter2 = () => {
@@ -109,7 +132,7 @@ function TweetReply ({value}){
            </svg>
             </div>
         
-             <span className="tweet-title-detail">{value}</span>
+             <span className="tweet-title-detail">{tweet.retweet}</span>
         </div>
     )
 
@@ -181,62 +204,15 @@ function Downlod (){
 
 }
 
-function TweetProfil({ icon }) {
-    return (
+function TweetProfil() {
+    const tweet = useContext(datasContexte)
+    
+    return (<>
         <div className="tweet-avatar">
-            <img src={icon} alt="logo tweet" />
-
+            <img src={tweet.profilTweet} alt="logo tweet" />
         </div>
+    </>
     )
 }
-const datas = [
-    {
-        id: 1,
-        autheur: "Michelkaji",
-        profil: "src/images/profile.png",
-        profilTweet: "src/images/tweetprofile.png",
-        text: "Bonjour suis développeur fullstack pour vos projets de digitalisation n'hésité pas à nous consulter",
-        postImage: "src/images/tweetimage.png",
-        tweetTitle: "CNN",
-        tweetpseudo: "@MichelKaji 1h",
-        iconTitle: "src/images/Group.svg",
-        comment: 49,
-        like: 100,
-        retweet: 2
-    },
-    {
-
-        id: 2,
-        autheur: "Tukya",
-        profil: "src/images/profile.png",
-        profilTweet: "src/images/twetIcone.png",
-        text: "Bonjour suis développeur fullstack pour vos projets de digitalisation n'hésité pas à nous consulter react",
-        postImage: "src/images/tweetimage.png",
-        tweetTitle: "New York Time",
-        tweetpseudo: "@Tukya h1",
-        iconTitle: "src/images/Group.svg",
-        comment: 1000,
-        like: 100,
-        retweet: 2
-
-    },
-    {
-
-        id: 3,
-        autheur: "Tukya",
-        profil: "src/images/profile.png",
-        profilTweet: "src/images/twetIcone.png",
-        text: "Bonjour suis développeur fullstack pour vos projets de digitalisation n'hésité pas à nous consulter react",
-        postImage: "src/images/tweetimage.png",
-        tweetTitle: "New York Time",
-        tweetpseudo: "@Tukya h1",
-        iconTitle: "src/images/Group.svg",
-        comment: 0,
-        like: 100,
-        retweet: 2
-
-    }
-]
-
 export default Tweets;
 
