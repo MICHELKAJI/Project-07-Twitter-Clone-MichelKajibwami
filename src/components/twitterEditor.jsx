@@ -4,14 +4,15 @@ import iconMedia from "../images/Media.svg";
 import iconPoll from "../images/Poll.svg";
 import iconSchdule from "../images/Schedule.svg";
 import Button from "./buttonTwitter";
-import ProfilAvatar from "./profilAvatar";
+import { TweetProfil } from "./tweet";
+
 
 
 
 function TwitterEditor(){
     return (
         <div className="tweet-editor">
-            <ProfilAvatar imag='src\images\profile.png' style='avatar'/>
+            <TweetProfil/>
             <TweetEditorForm/>
         </div>
     )

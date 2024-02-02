@@ -1,27 +1,25 @@
 import React, { useContext, useState } from 'react';
 import {  TweetContext } from './ContextDatas';
 import { createContext } from 'react';
+import { Link } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
-const datasContexte = createContext()
+
+export const datasContexte = createContext()
 
 function Tweets() {
-    const tweet = useContext(TweetContext)
+ const tweet = useContext(TweetContext);
     return (
-        // <ContextProvider>
         <>
-        
-        
-
         <div>
         {tweet.map(tweet=>
            
             <div className="tweet" key={tweet.id}>
            <datasContexte.Provider value={tweet}>
                 
-        <TweetProfil/> 
+        <TweetProfil {...tweet}/> 
             <div className="tweet-content">
                 <div className="tweet-body">
-               
                     <TweetTitle/>
                     <TweetText/>
                     <TweetImage/>
@@ -39,49 +37,81 @@ function Tweets() {
         </div>
         
         </>
-        // </ContextProvider>
-
     )
 }
 
-
-function TweetTitle() {
+export function TweetTitle() {
     const tweet = useContext(datasContexte)
 
     return(<>
          <div className="tweet-title" >
-         <h2 className="tweet-title-author">{tweet.tweetTitle}</h2>
+         <h2 className="tweet-title-author">{tweet.tweets[0].tweetTitle}</h2>
          <div className="">
-             <img src={tweet.iconTitle} alt="title tweet" />
+             <img src={tweet.tweets[0].iconTitle} alt="title tweet" />
          </div>
-         <strong className="tweet-title-details">{tweet.tweetpseudo}</strong>
+         <strong className="tweet-title-details">{tweet.tweets[0].tweetpseudo}</strong>
      </div>
 
      </>) 
 }
-function TweetText() {
+export function TweetText() {
     const tweet = useContext(datasContexte)
     return (
         <div className="tweet-text">
             <p>
-            {tweet.text}
+            {tweet.tweets[0].text}
             </p>
-           
-
         </div>
     )
 }
-function TweetImage() {
+
+export function TweetFilter() {
+    const [seachParams] = useSearchParams();
+    const datas = Object.fromEntries([...seachParams]);
+    const tweet = useContext(TweetContext);
+
+    const tweetUser = tweet.filter((tweets)=> tweets.profilTweet === datas.profilTweet)
+   
+    return (
+        <>
+        <div>
+        {tweetUser.map((tweet)=>
+            <div className="tweet" key={tweet.id}>
+                <TweetProfil {...tweet}/> 
+           <datasContexte.Provider value={tweet}>
+        <div className="tweet-content">
+                <div className="tweet-body">
+                    <TweetTitle/>
+                    <TweetText/>
+                    <TweetImage/>
+                </div>
+                <div className="tweet-actions ">
+                    <TweetComment/>
+                    <TweetReply/>
+                    <TweetLike/>
+                    <Downlod/>
+                </div>
+            </div>
+            </datasContexte.Provider> 
+        </div>
+         )}
+        </div>
+        
+        </>
+    )
+}
+
+export function TweetImage() {
     const tweet = useContext(datasContexte)
     return (
         <div className="tweet-image">
-            <img src={tweet.postImage} alt="imageTweet" />
+            <img src={tweet.tweets[0].postImage} alt="imageTweet" />
 
         </div>
     )
 }
 
-function TweetComment() {
+export function TweetComment() {
     const tweet = useContext(datasContexte)
     const [isHovered, setIsHovered] = useState(false);
    
@@ -104,12 +134,12 @@ function TweetComment() {
             </svg>
             </div>
         
-             <span className="tweet-title-detail">{tweet.comment}</span>
+             <span className="tweet-title-detail">{tweet.tweets[0].comment}</span>
         </div>
     )
 }
  
-function TweetReply (){
+export function TweetReply (){
     const tweet = useContext(datasContexte)
    
     const [isHovered2, setIsHovered] = useState(false);
@@ -132,14 +162,15 @@ function TweetReply (){
            </svg>
             </div>
         
-             <span className="tweet-title-detail">{tweet.retweet}</span>
+             <span className="tweet-title-detail">{tweet.tweets[0].retweet}</span>
         </div>
     )
 
 }
-function TweetLike ({value}){
+export function TweetLike (){
+    const tweet = useContext(datasContexte)
     const [isHovered3, setIsHovered3] = useState(false);
-    const [count, setcount] = useState(value);
+    const [count, setcount] = useState(tweet.tweets[0].like);
     const [icon, seticon] = useState(false);
 
     const handlclique = () => {
@@ -175,10 +206,8 @@ function TweetLike ({value}){
              <span className="tweet-title-detail">{count}</span>
         </div>
     )
-
 }
-
-function Downlod (){
+export function Downlod (){
     const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseEnter = () => {
@@ -204,15 +233,20 @@ function Downlod (){
 
 }
 
-function TweetProfil() {
-    const tweet = useContext(datasContexte)
+export function TweetProfil({profilTweet, tweetTitle, tweetpseudo}) {
     
-    return (<>
+    return ( <>
         <div className="tweet-avatar">
-            <img src={tweet.profilTweet} alt="logo tweet" />
+          <Link to ={ `/profile?profilTweet=${profilTweet}&tweetTitle=${tweetTitle}&tweetpseudo=${tweetpseudo}`}>
+            <img src={profilTweet} alt="logo tweet"/>
+
+        </Link>
+          
         </div>
-    </>
+      </>
     )
 }
+
+
 export default Tweets;
 

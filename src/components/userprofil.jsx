@@ -1,14 +1,15 @@
-import ProfilAvatar from "./profilAvatar";
 import Button from "./buttonTwitter";
 import HeaderProfil from "./headerProfil";
 import NavBarre from "./navBarre";
-import TweetForm from "./tweet";
+import { TweetFilter, TweetProfil } from "./tweet";
 
-function UserProfile() {
+
+
+function UserProfile(){
   return (
     <div className="styleUserProfil">
       <div className="iconProfil">
-        <div><ProfilAvatar imag='src\images\profile.png' style='avatares' /></div>
+        <div><TweetProfil/></div>
         <div><Button style="buttone">Edit Profil</Button></div>
       </div>
       <div className="" >
@@ -16,7 +17,7 @@ function UserProfile() {
       </div>
       <h3 className="titlesuser"><span className="tweet-text">160</span>Abonement</h3>
       <NavBarre />
-      <TweetForm />
+      <TweetFilter/>
     </div>
   )
 }

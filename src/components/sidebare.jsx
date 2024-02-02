@@ -12,7 +12,7 @@ function Sidebare(){
             <IconSidebar icon="src\images\Messages.svg" text ="Message"/>
             <IconSidebar icon="src\images\Bookmarks.svg" text ="Bookmarks"/>
             <IconSidebar icon="src\images\Lists.svg" text ="Lists"/>
-            <IconSidebar icon="src\images\Profiles.svg" text ="Profile" routes='/profile'/>
+            <IconSidebar icon="src\images\Profiles.svg" text ="Profile" routes='/profile?profilTweet=src/images/profile.png&tweetTitle=undefined&tweetpseudo=undefined'/>
             <IconSidebar icon="src\images\More.svg" text ="More"/>
             <Button style="buttonTow">Twitter</Button>
 

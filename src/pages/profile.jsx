@@ -4,6 +4,7 @@ import Trends from "../components/trends";
 import HeaderProfil, { BannerProfil } from "../components/headerProfil";
 import UserProfile from "../components/userprofil";
 
+
 function Profil(){
     return(
         <>
@@ -14,8 +15,6 @@ function Profil(){
             <HeaderProfil name= "MichelKaji"/>
             <BannerProfil/>
             <UserProfile/>
-            
-
        </main>
        <aside className='asideTow'>
        <Trends/>
