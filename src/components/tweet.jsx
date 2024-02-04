@@ -3,6 +3,8 @@ import {  TweetContext } from './ContextDatas';
 import { createContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useSearchParams } from 'react-router-dom';
+import NavBarre from './navBarre';
+import Button from './buttonTwitter';
 
 
 export const datasContexte = createContext()
@@ -45,11 +47,11 @@ export function TweetTitle() {
 
     return(<>
          <div className="tweet-title" >
-         <h2 className="tweet-title-author">{tweet.tweets[0].tweetTitle}</h2>
+         <h2 className="tweet-title-author">{tweet.tweetTitle}</h2>
          <div className="">
-             <img src={tweet.tweets[0].iconTitle} alt="title tweet" />
+             <img src={tweet.iconTitle} alt="title tweet" />
          </div>
-         <strong className="tweet-title-details">{tweet.tweets[0].tweetpseudo}</strong>
+         <strong className="tweet-title-details">{tweet.tweetpseudo}</strong>
      </div>
 
      </>) 
@@ -59,7 +61,7 @@ export function TweetText() {
     return (
         <div className="tweet-text">
             <p>
-            {tweet.tweets[0].text}
+            {tweet.text}
             </p>
         </div>
     )
@@ -74,6 +76,22 @@ export function TweetFilter() {
    
     return (
         <>
+         <div className="styleUserProfil">
+      <div className="iconProfil">
+        <div className="avatares img"><img src={datas.profilTweet} alt='profile'/></div>
+        <div><Button style="buttone">Edit Profil</Button></div>
+      </div>
+      <div className="" >
+      <header className="headerStyle">
+            <h1 className="page-title">{datas.autheur}</h1>
+            <span className="titlesuser">{datas.tweetpseudo}</span>
+        </header>
+      </div>
+      <h3 className="titlesuser"><span className="tweet-text">160</span>Abonement</h3>
+      <NavBarre />
+    </div>
+
+
         <div>
         {tweetUser.map((tweet)=>
             <div className="tweet" key={tweet.id}>
@@ -105,7 +123,7 @@ export function TweetImage() {
     const tweet = useContext(datasContexte)
     return (
         <div className="tweet-image">
-            <img src={tweet.tweets[0].postImage} alt="imageTweet" />
+            <img src={tweet.postImage} alt="imageTweet" />
 
         </div>
     )
@@ -134,7 +152,7 @@ export function TweetComment() {
             </svg>
             </div>
         
-             <span className="tweet-title-detail">{tweet.tweets[0].comment}</span>
+             <span className="tweet-title-detail">{tweet.comment}</span>
         </div>
     )
 }
@@ -162,7 +180,7 @@ export function TweetReply (){
            </svg>
             </div>
         
-             <span className="tweet-title-detail">{tweet.tweets[0].retweet}</span>
+             <span className="tweet-title-detail">{tweet.retweet}</span>
         </div>
     )
 
@@ -170,7 +188,7 @@ export function TweetReply (){
 export function TweetLike (){
     const tweet = useContext(datasContexte)
     const [isHovered3, setIsHovered3] = useState(false);
-    const [count, setcount] = useState(tweet.tweets[0].like);
+    const [count, setcount] = useState(tweet.like);
     const [icon, seticon] = useState(false);
 
     const handlclique = () => {

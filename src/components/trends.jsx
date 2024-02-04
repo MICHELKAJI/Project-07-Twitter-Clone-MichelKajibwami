@@ -3,6 +3,7 @@ import icon from '../images/Explore.svg'
 import icone from '../images/Options.png'
 import img from '../images/Common-More-Button.png'
 import Button from './buttonTwitter'
+import { Link } from 'react-router-dom'
 
 function Trends(){
     return(
@@ -21,9 +22,18 @@ function Trends(){
             </div>
             <div className='trends'>
                 <TitleSidbar/>
+                <Link to='/profile?profilTweet=src/images/profile.png&tweetTitle=undefined&tweetpseudo=undefined'>
                 <Follow profil="src\images\tweetprofile.png" tilte="CNN" icon= "src\images\Group.svg" tiltTow="@CNN"/>
+                </Link>
+                <Link to='/profile?profilTweet=src/images/profile.png&tweetTitle=undefined&tweetpseudo=undefined'>
                 <Follow profil="src\images\twetIcone.png" tilte="NEW YORK TIM" icon="src\images\Group.svg" tiltTow="@CNN"/>
+                </Link>
+                <Link to ='/profile?profilTweet=src/images/profile.png&tweetTitle=undefined&tweetpseudo=undefined'>
                 <Follow profil="src\images\twitter.svg" tilte="Twitter" icon= "src\images\Group.svg" tiltTow="@CNN"/>
+                </Link>
+                
+                
+                
                 <ShowMore/>
             </div>
         </div> 

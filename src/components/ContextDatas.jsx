@@ -7,9 +7,6 @@ const datas = [
         autheur: "Michelkaji",
         profil: "src/images/profile.png",
         profilTweet: "src/images/profile.png",
-
-        tweets: [{ 
-       
         text: "Bonjour suis développeur fullstack",
         postImage: "src/images/tweetimage.png",
         tweetTitle: "MichelKaji",
@@ -17,7 +14,7 @@ const datas = [
         iconTitle: "src/images/Group.svg",
         comment: 49,
         like: 100,
-        retweet: 2}]
+        retweet: 2
 
     },
     {
@@ -25,9 +22,6 @@ const datas = [
         autheur: "Michelkaji",
         profil: "src/images/profile.png",
         profilTweet: "src/images/profile.png",
-
-        tweets: [{ 
-       
         text: "Bonjour suis développeur fullstack pour vos projets de digitalisation n'hésité pas à nous consulter",
         postImage: "src/images/tweetimage.png",
         tweetTitle: "MichelKaji",
@@ -35,7 +29,7 @@ const datas = [
         iconTitle: "src/images/Group.svg",
         comment: 49,
         like: 100,
-        retweet: 2}]
+        retweet: 2
        
     },
     {
@@ -44,8 +38,6 @@ const datas = [
         autheur: "Tukya",
         profil: "src/images/profile.png",
         profilTweet: "src/images/twetIcone.png",
-
-        tweets:[{ 
         text: "Bonjour suis développeur fullstack pour vos projets de digitalisation n'hésité pas à nous consulter react",
         postImage: "src/images/tweetimage.png",
         tweetTitle: "New York Time",
@@ -53,7 +45,7 @@ const datas = [
         iconTitle: "src/images/Group.svg",
         comment: 1000,
         like: 100,
-        retweet: 2}]
+        retweet: 2
     
     },
     {
@@ -61,19 +53,29 @@ const datas = [
         autheur: "New York Time",
         profil: "src/images/profile.png",
         profilTweet: "src/images/twetIcone.png",
-        tweets:[{
-          
-            text: "Bonjour suis développeur fullstack pour vos projets de digitalisation n'hésité pas à nous consulter react",
-            postImage: "src/images/tweetimage.png",
-            tweetTitle: "New York Time",
-            tweetpseudo: "@New York Time",
-            iconTitle: "src/images/Group.svg",
-            comment: 0,
-            like: 100,
-            retweet: 2
-        }]
-       
+        text: "Bonjour suis développeur fullstack pour vos projets de digitalisation n'hésité pas à nous consulter react",
+        postImage: "src/images/tweetimage.png",
+        tweetTitle: "New York Time",
+        tweetpseudo: "@New York Time",
+        iconTitle: "src/images/Group.svg",
+        comment: 0,
+        like: 100,
+        retweet: 2
+    },
 
+    {
+        id: 5,
+        autheur: "CNN",
+        profil: "src/images/profile.png",
+        profilTweet: "src/images/tweetprofile.png",
+        text: "Bonjour suis développeur fullstack pour vos projets de digitalisation n'hésité pas à nous consulter react",
+        postImage: "src/images/tweetimage.png",
+        tweetTitle: "CNN",
+        tweetpseudo: "@CNN",
+        iconTitle: "src/images/Group.svg",
+        comment: 0,
+        like: 100,
+        retweet: 2
     }
 ]
 

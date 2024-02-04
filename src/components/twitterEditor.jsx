@@ -4,7 +4,9 @@ import iconMedia from "../images/Media.svg";
 import iconPoll from "../images/Poll.svg";
 import iconSchdule from "../images/Schedule.svg";
 import Button from "./buttonTwitter";
-import { TweetProfil } from "./tweet";
+import { Link } from "react-router-dom";
+import profile from "../images/profile.png";
+
 
 
 
@@ -12,7 +14,7 @@ import { TweetProfil } from "./tweet";
 function TwitterEditor(){
     return (
         <div className="tweet-editor">
-            <TweetProfil/>
+            <div> <Link to='/profile?profilTweet=src/images/profile.png&tweetTitle=undefined&tweetpseudo=undefined'><img src={profile} alt="profile"/></Link></div>
             <TweetEditorForm/>
         </div>
     )

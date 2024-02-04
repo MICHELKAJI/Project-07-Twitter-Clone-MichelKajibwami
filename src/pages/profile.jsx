@@ -2,7 +2,8 @@ import React from "react";
 import Sidebare from "../components/sidebare";
 import Trends from "../components/trends";
 import HeaderProfil, { BannerProfil } from "../components/headerProfil";
-import UserProfile from "../components/userprofil";
+import { TweetFilter } from "../components/tweet";
+
 
 
 function Profil(){
@@ -14,7 +15,8 @@ function Profil(){
         <main className="timeline">
             <HeaderProfil name= "MichelKaji"/>
             <BannerProfil/>
-            <UserProfile/>
+            <TweetFilter/>
+
        </main>
        <aside className='asideTow'>
        <Trends/>
